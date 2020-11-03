@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Console Tricks</title>
+</head>
+<body>
+  <h1>Console Tricks</h1>
+  <p>Open the web console for some sick tricks.</p>
+  <script>
+    // https://youtu.be/x4q86IjJFag
+
+    // Outputs a message to the web console (https://developer.mozilla.org/en-US/docs/Web/API/Console/log)
+    console.log('Hello World');
+
+    // Outputs an error message to the web console (https://developer.mozilla.org/en-US/docs/Web/API/Console/error)
+    console.error('This is an error');
+
+    // Outputs a warning message to the web console (https://developer.mozilla.org/en-US/docs/Web/API/Console/warn)
+    console.warn('This is a warning');
+
+    // Shows a JavaScript representation of any DOM element as an interactive list of properties (https://developer.mozilla.org/en-US/docs/Web/API/Console/dir)
+    console.dir(document);
+    console.dir(document.URL);
+
+    // Displays tabular data as a table (https://developer.mozilla.org/en-US/docs/Web/API/Console/table)
+    console.table([{name: "Nate", age: 36, hungry: true}]);
+
+    // Creates a new inline group in the web console log (https://developer.mozilla.org/en-US/docs/Web/API/Console/group)
+    console.group('Say Hello');
+      console.log('Hello, Nate!');
+      console.log('Hello, Greg!');
+      console.log('Hello, Liz!');
+    console.groupEnd('Say Hello');
+
+    // Starts a timer you can use to track how long an operation takes (https://developer.mozilla.org/en-US/docs/Web/API/Console/time)
+
+    console.time('For Loop');
+      for(let i = 1; i <= 10; i++) {
+        console.log(i);
+      }
+    console.timeEnd('For Loop');
+
+    // Writes an error message to the console if the assertion is false. If the assertion is true, nothing happens (https://developer.mozilla.org/en-US/docs/Web/API/console/assert)
+
+    function greaterThan(x, y) {
+      console.assert(x > y, {"message": "x is not greater than y", "x": x, "y": y});
+    }
+    greaterThan(4, 5);
+    greaterThan(6, 5);
+  </script>
+</body>
+</html>

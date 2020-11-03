@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser Storage</title>
+</head>
+<body>
+  <h1>Browser Storage</h1>
+  <p>Open the application tab of dev tools for some sick storage action.</p>
+  <script>
+    // https://youtu.be/x4q86IjJFag
+    
+    localStorage.setItem('name', 'Nate');
+    console.log('localStorage: ', localStorage.getItem('name'));
+
+    sessionStorage.setItem('car', 'BMW');
+
+    document.cookie = "username=nate dog";
+  </script>
+</body>
+</html>
